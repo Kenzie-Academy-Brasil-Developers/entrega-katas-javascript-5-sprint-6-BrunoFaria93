@@ -7,9 +7,9 @@ function testeReverseString1() {
  }
 
  function testeReverseString2() {
-    let result = reverseString(123);
-    let expected = 'string';
-    console.assert(typeof result === expected, `esperado: string, obtido: ${typeof result}`)
+    let result = reverseString(" Kenzie Academy");
+    let expected = "ymedacA eizneK";
+    console.assert(typeof result === expected, `esperado: ${expected}, obtido: ${result}`)
  }
 
  function reverseString(frase){
@@ -29,15 +29,18 @@ function testReverseSentence1(){
  }
 
 function testReverseSentence2(){
-    let result = reverseString(123);
-    let expected = 'string';
-    console.assert(typeof result === expected, `esperado: string, obtido: ${typeof result}`)
+    let result = reverseString('bob likes dogs');
+    let expected = "dogs likes bob";
+    console.assert(typeof result === expected, `esperado: ${expected}, obtido: sgod sekil bob`)
 }
 function reverseSentence(frase){
     let array = frase.split(' ')
     let result = []
     for(let i = array.length - 1; i >= 0; i --){
-        result.push(array[i])
+        if(array[i] != ' '){
+           result.push(array[i])
+        }
+        
     }
     return result.join(' ')
 }
